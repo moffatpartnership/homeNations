@@ -20,7 +20,7 @@ window.FNViewer = {};
 
         var storygroupid = document.getElementById("canvasFourNations").getAttribute("data-haplogroup-id");
 
-        $.getJSON('https://api.moffpart.com/api/1/databases/sdnacontent/collections/c2FourNations?q={"storygroupid":"'+ storygroupid +'"}&apiKey=50e55b5fe4b00738efa04da0&callback=?', function(ret,stat) {
+        $.getJSON('https://api.moffpart.com/api/1/results/getHaplogroup?q={"storygroupid":"'+ storygroupid +'"}&c=c2FourNations&callback=?', function(ret) {
 
             srcItems = ret[0].srcItems;
             dataItems = ret[0].dataItems;
